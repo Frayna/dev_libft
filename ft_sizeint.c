@@ -6,13 +6,13 @@
 /*   By: pgourran <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2015/11/29 18:58:49 by pgourran          #+#    #+#             */
-/*   Updated: 2015/11/29 19:03:13 by pgourran         ###   ########.fr       */
+/*   Updated: 2015/11/30 21:30:57 by pgourran         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int ft_sizeint(int n)
+int	ft_sizeint(int n)
 {
 	int i;
 
@@ -22,11 +22,10 @@ int ft_sizeint(int n)
 		n = -n;
 		i++;
 	}
-
 	while (n > 0)
 	{
 		n /= 10;
 		i++;
 	}
-return(i);
+	return (i);
 }

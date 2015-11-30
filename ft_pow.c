@@ -6,17 +6,17 @@
 /*   By: pgourran <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2015/11/29 20:15:42 by pgourran          #+#    #+#             */
-/*   Updated: 2015/11/29 20:17:53 by pgourran         ###   ########.fr       */
+/*   Updated: 2015/11/30 21:48:20 by pgourran         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int ft_pow(int x, int pow)
+int	ft_pow(int x, int pow)
 {
 	if (pow < 0)
-		return(1 / ft_pow(x,-pow));
+		return (1 / ft_pow(x, -pow));
 	if (pow == 0)
-		return(1);
-	while(--pow)
+		return (1);
+	while (--pow)
 	{
 		x *= x;
 	}

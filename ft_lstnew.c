@@ -1,29 +1,22 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memchr.c                                        :+:      :+:    :+:   */
+/*   ft_lstnew.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: pgourran <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2015/11/29 20:14:46 by pgourran          #+#    #+#             */
-/*   Updated: 2015/11/30 21:49:19 by pgourran         ###   ########.fr       */
+/*   Created: 2015/11/30 21:14:11 by pgourran          #+#    #+#             */
+/*   Updated: 2015/11/30 21:19:22 by pgourran         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <string.h>
+# include "libft.h"
 
-void	*ft_memchr(const void *s, int c, size_t n)
+t_list	*ft_lstnew(void const *content, size_t content_size)
 {
-	unsigned char	*t;
-	unsigned int	i;
+	t_list *new;
 
-	i = 0;
-	t = (unsigned char *)s;
-	while (i < n)
-	{
-		if (t[i] == (unsigned char)c)
-			return (&t[i]);
-		i++;
-	}
-	return (NULL);
+	new = malloc;
+
+
 }

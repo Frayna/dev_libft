@@ -3,12 +3,14 @@
 #                                                         :::      ::::::::    #
 #    Makefile                                           :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
-#    By: tifuzeau <marvin@42.fr>                    +#+  +:+       +#+         #
+#    By: pgourran <marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
-#    Created: 2015/11/23 18:14:12 by tifuzeau          #+#    #+#              #
-#    Updated: 2015/11/30 16:44:41 by pgourran         ###   ########.fr        #
+#    Created: 2015/11/30 21:57:41 by pgourran          #+#    #+#              #
+#    Updated: 2015/11/30 21:58:26 by pgourran         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
+
+
 
 NAME	= libft.a
 SHELL	= /bin/sh
