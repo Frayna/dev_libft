@@ -6,41 +6,44 @@
 /*   By: tifuzeau <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2015/11/24 11:42:18 by tifuzeau          #+#    #+#             */
-/*   Updated: 2015/11/26 19:40:01 by tifuzeau         ###   ########.fr       */
+/*   Updated: 2015/11/29 17:15:57 by tifuzeau         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_strnstr(const char *meule, const char *aiguille, size_t n)
+static int		match(const char *meule, const char *aiguille, size_t n)
 {
-	size_t			i;
-	const	char	*out;
-	const	char	*init_aiguille;
+	while (n && (*aiguille && *meule) && (*meule == *aiguille))
+	{
+		meule++;
+		aiguille++;
+		n--;
+	}
+	if (*aiguille == '\0')
+		return (1);
+	else if (n == 0)
+		return (-1);
+	else
+		return (0);
+}
 
-	init_aiguille = aiguille;
-	if (!(*aiguille) || n == 0)
+char			*ft_strnstr(const char *meule, const char *aiguille, size_t n)
+{
+	int				i;
+
+	i = 0;
+	if (!*aiguille)
 		return ((char *)meule);
 	while (*meule && n)
 	{
 		if (*meule == *aiguille)
 		{
-			out = meule;
-			i = n;
-			while ((*meule == *aiguille) && (n && *meule))
-			{
-				meule++;
-				aiguille++;
-				i++;
-				n--;
-			}
-			if (*aiguille == '\0')
-				return ((char *)out);
-			if (n == 0)
+			i = match(meule, aiguille, n);
+			if (i == 1)
+				return ((char *)meule);
+			if (i == -1)
 				return (NULL);
-			n = i;
-			meule = out;
-			aiguille = init_aiguille;
 		}
 		meule++;
 		n--;

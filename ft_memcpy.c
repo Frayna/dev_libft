@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_memcpy.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: tifuzeau <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: pgourran <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2015/11/24 15:53:45 by tifuzeau          #+#    #+#             */
-/*   Updated: 2015/11/25 02:46:00 by tifuzeau         ###   ########.fr       */
+/*   Created: 2015/11/29 20:15:05 by pgourran          #+#    #+#             */
+/*   Updated: 2015/11/29 20:15:09 by pgourran         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,5 +24,5 @@ void	*ft_memcpy(void *dst, const void *src, size_t n)
 		src++;
 		n--;
 	}
-	return (ptr_dst);
+	return (dst);
 }

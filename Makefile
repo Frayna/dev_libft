@@ -6,7 +6,7 @@
 #    By: tifuzeau <marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2015/11/23 18:14:12 by tifuzeau          #+#    #+#              #
-#    Updated: 2015/11/28 20:08:30 by pgourran         ###   ########.fr        #
+#    Updated: 2015/11/30 16:44:41 by pgourran         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -65,7 +65,6 @@ SRC		= ft_atoi.c\
 		  ft_strnew.c\
 		  ft_strnstr.c\
 		  ft_strrchr.c\
-		  ft_strslip.c\
 		  ft_strstr.c\
 		  ft_strsub.c\
 		  ft_strtrim.c\

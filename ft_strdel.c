@@ -6,7 +6,7 @@
 /*   By: tifuzeau <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2015/11/25 03:50:09 by tifuzeau          #+#    #+#             */
-/*   Updated: 2015/11/29 17:14:34 by pgourran         ###   ########.fr       */
+/*   Updated: 2015/11/27 20:28:59 by tifuzeau         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,11 +14,9 @@
 
 void	ft_strdel(char **as)
 {
-	as++;
-	/*
-	void **s = (void **)as;
-	if (as && s)
-		ft_memdel(s);
-	as = NULL;
-*/
+	if (*as != NULL)
+	{
+		free(*as);
+		*as = NULL;
 	}
+}

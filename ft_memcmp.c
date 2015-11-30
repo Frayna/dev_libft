@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_memcmp.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: tifuzeau <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: pgourran <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2015/11/25 00:25:10 by tifuzeau          #+#    #+#             */
-/*   Updated: 2015/11/26 18:05:40 by tifuzeau         ###   ########.fr       */
+/*   Created: 2015/11/29 20:14:56 by pgourran          #+#    #+#             */
+/*   Updated: 2015/11/29 20:14:58 by pgourran         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,9 +27,5 @@ int		ft_memcmp(const void *s1, const void *s2, size_t n)
 		ptr_s2++;
 		n--;
 	}
-	if (*ptr_s1 > *ptr_s2)
-		return (1);
-	if (*ptr_s1 < *ptr_s2)
-		return (-1);
-	return (0);
+	return (*ptr_s1 - *ptr_s2);
 }

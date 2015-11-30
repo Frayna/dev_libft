@@ -6,7 +6,7 @@
 /*   By: tifuzeau <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2015/11/25 15:57:45 by tifuzeau          #+#    #+#             */
-/*   Updated: 2015/11/25 16:16:23 by tifuzeau         ###   ########.fr       */
+/*   Updated: 2015/11/29 17:16:46 by tifuzeau         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 static size_t	lentrim(char const *s)
 {
-	size_t len;
+	size_t	len;
 
 	len = 0;
 	while (*s == ' ' || *s == '\n' || *s == '\t')
@@ -24,7 +24,8 @@ static size_t	lentrim(char const *s)
 		len++;
 		s++;
 	}
-	if (len != 0)
+	s--;
+	if (len > 0)
 	{
 		while (*s == ' ' || *s == '\n' || *s == '\t')
 		{
@@ -35,14 +36,14 @@ static size_t	lentrim(char const *s)
 	return (len);
 }
 
-char	*ft_strtrim(char const *s)
+char			*ft_strtrim(char const *s)
 {
 	char	*out;
 	char	*tmp;
 	size_t	len_out;
 
 	len_out = lentrim(s) + 1;
-	if ((out = (char *)malloc(sizeof(out) * len_out)))
+	if ((out = (char *)malloc(sizeof(char) * len_out)))
 	{
 		tmp = out;
 		while (*s == ' ' || *s == '\n' || *s == '\t')

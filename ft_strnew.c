@@ -6,7 +6,7 @@
 /*   By: tifuzeau <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2015/11/25 03:45:24 by tifuzeau          #+#    #+#             */
-/*   Updated: 2015/11/29 18:25:10 by pgourran         ###   ########.fr       */
+/*   Updated: 2015/11/29 16:36:32 by tifuzeau         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,17 +15,18 @@
 char	*ft_strnew(size_t size)
 {
 	char *out;
+	char *pt_out;
 
-	if ((out = (char *)ft_memalloc(size)))
+	out = malloc(sizeof(char) * size + 1);
+	if (!out)
+		return (NULL);
+	pt_out = out;
+	while (size)
 	{
-/*		pt_out = out;
-		while (size)
-		{
-			*pt_out = '\0';
-			pt_out++;
-			size--;
-		}
-*/		return (out);
+		*pt_out = '\0';
+		pt_out++;
+		size--;
 	}
-	return (NULL);
+	*pt_out = '\0';
+	return (out);
 }
