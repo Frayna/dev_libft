@@ -4,9 +4,7 @@
 #include "stdlib.h"
 int main()
 {
-	char *buf = "coucou";
-	char **buf2 = ft_strsplit(buf,'*');
-	ft_putstr(buf2[0]);
-	ft_putstr(buf2[1]);
+	char *buf = "aabbbaabaaa";
+	ft_putstr(ft_strstr(buf, "baaa"));
 	return(0);
 }

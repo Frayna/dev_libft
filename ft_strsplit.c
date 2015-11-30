@@ -6,7 +6,7 @@
 /*   By: pgourran <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2015/11/30 16:07:39 by pgourran          #+#    #+#             */
-/*   Updated: 2015/11/30 19:01:43 by pgourran         ###   ########.fr       */
+/*   Updated: 2015/11/30 21:00:41 by pgourran         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,10 +28,11 @@ static int evalx(char *s, char c)
 	int i;
 
 	i = 0;
-	while(s[i] != c)
+	while ((s[i] != c) && (s[i] != '\0'))
 		i++;
 	return(i);
 }
+
 static int evaly(char *s, char c)
 {
 	int y;
@@ -61,19 +62,21 @@ char			**ft_strsplit(char const *s, char c)
 
 	i = 0;
 	y = evaly((char *)s,c);
-	out = (char **)ft_memalloc(sizeof(char *) * y + 1);
-	while (y > i)
+
+	if ((out = (char **)ft_memalloc(sizeof(char *) * y + 1)))
 	{
-		if ((*s != c) && (*s))
+		while (y > i)
 		{
-			x = evalx((char *)s,c) + 1;
-			out[i] = (char *)ft_memalloc(x);
-			ft_strncpy(out[i], s, x);
-			s += x;
 			s += tonext((char *)s,c);
+			x = evalx((char *)s,c) + 1;
+			if ((*s) && ((out[i] = (char *)ft_memalloc(x + 1))))
+			{
+				ft_strncpy(out[i], s, x - 1);
+				s += x;
+			}
+			i++;
 		}
-		i++;
+		out[y] = NULL;
 	}
-	out[y] = NULL;
 	return(out);
 }
