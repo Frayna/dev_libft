@@ -6,7 +6,7 @@
 /*   By: pgourran <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2015/11/30 21:57:30 by pgourran          #+#    #+#             */
-/*   Updated: 2015/11/30 21:57:32 by pgourran         ###   ########.fr       */
+/*   Updated: 2015/12/01 22:05:39 by pgourran         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -73,6 +73,12 @@ void	ft_bzero(void *s, size_t n);
 void	ft_strclt(char *s);
 void	ft_striter(char *s, void (*f)(char *));
 void	ft_striteri(char *s, void (*f)(unsigned int, char *));
+void	ft_lstadd(t_list **alst, t_list *nouveau);
+void	ft_lstdel(t_list **alst, void (*del)(void *, size_t));
+void	ft_lstdelone(t_list **alst, void (*del)(void*, size_t));
+void	ft_lstiter(t_list *lst, void (*f)(t_list *elem));
+t_list	*ft_lstmap(t_list *lst, t_list *(*f)(t_list *elem));
+t_list	*ft_lstnew(void const *content, size_t content_size);
 
 void	*ft_memset(void *b, int c, size_t len);
 void	*ft_memalloc(size_t size);

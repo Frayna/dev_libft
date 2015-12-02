@@ -6,7 +6,7 @@
 #    By: pgourran <marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2015/11/30 21:57:41 by pgourran          #+#    #+#              #
-#    Updated: 2015/11/30 21:58:26 by pgourran         ###   ########.fr        #
+#    Updated: 2015/12/01 22:03:55 by pgourran         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -74,7 +74,14 @@ SRC		= ft_atoi.c\
 		  ft_toupper.c\
 		  ft_strsplit.c\
 		  ft_sizeint.c\
-		  ft_pow.c
+		  ft_pow.c\
+		  ft_lstadd.c\
+		  ft_lstdel.c\
+		  ft_lstdelone.c\
+		  ft_lstiter.c\
+		  ft_lstmap.c\
+		  ft_lstnew.c\
+		  ft_strslip.c
 
 
 all: $(NAME)

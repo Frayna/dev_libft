@@ -1,30 +1,25 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_lstnew.c                                        :+:      :+:    :+:   */
+/*   ft_sqrt.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: pgourran <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2015/11/30 21:14:11 by pgourran          #+#    #+#             */
-/*   Updated: 2015/12/02 17:55:44 by pgourran         ###   ########.fr       */
+/*   Created: 2015/12/02 18:06:21 by pgourran          #+#    #+#             */
+/*   Updated: 2015/12/02 18:09:55 by pgourran         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 # include "libft.h"
 
-t_list	*ft_lstnew(void const *content, size_t content_size)
+int		ft_sqrt(int i)
 {
-	t_list *new;
+	int s;
 
-	if ((new = malloc(sizeof(t_list))))
-	{
-		if ((content) && ((new->content = ft_memalloc(content_size))))
-		{
-		ft_memcpy(new->content, content, content_size);
-		new->content_size = content_size;
-		}
-		new->next = NULL;
-		return (new);
-	}
-	return(NULL);
+	s = 0;
+	while (s*s < i)
+		s++;
+	if (s*s == i)
+		return(s);
+	return(0);
 }
