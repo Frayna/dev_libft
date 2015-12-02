@@ -1,25 +1,29 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_sqrt.c                                          :+:      :+:    :+:   */
+/*   ft_isprime.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: pgourran <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2015/12/02 18:06:21 by pgourran          #+#    #+#             */
-/*   Updated: 2015/12/02 19:44:03 by pgourran         ###   ########.fr       */
+/*   Created: 2015/12/02 19:51:00 by pgourran          #+#    #+#             */
+/*   Updated: 2015/12/02 19:57:31 by pgourran         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 # include "libft.h"
 
-int		ft_sqrt(int i)
+int		ft_isprime(int n)
 {
-	int s;
+	int i;
 
-	s = 0;
-	while (s*s < i)
-		s++;
-	if (s*s == i)
-		return(s);
-	return(-1);
+	i = 3;
+	if (n == 2)
+		return (1);
+	if (n % 2 == 0)
+		return (0);
+	while ((i < n) && (n % i != 0))
+		i += 2;
+	if (i == n)
+		return (1);
+	return (0);
 }

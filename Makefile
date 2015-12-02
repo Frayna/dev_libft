@@ -6,7 +6,7 @@
 #    By: pgourran <marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2015/11/30 21:57:41 by pgourran          #+#    #+#              #
-#    Updated: 2015/12/01 22:03:55 by pgourran         ###   ########.fr        #
+#    Updated: 2015/12/02 20:27:49 by pgourran         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -81,7 +81,9 @@ SRC		= ft_atoi.c\
 		  ft_lstiter.c\
 		  ft_lstmap.c\
 		  ft_lstnew.c\
-		  ft_strslip.c
+		  ft_isprime.c\
+		  ft_sqrt.c\
+		 ft_puttab.c
 
 
 all: $(NAME)

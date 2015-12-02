@@ -1,28 +1,23 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_putnbr.c                                        :+:      :+:    :+:   */
+/*   ft_puttab.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: tifuzeau <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: pgourran <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2015/11/26 12:02:29 by tifuzeau          #+#    #+#             */
-/*   Updated: 2015/11/26 12:05:32 by tifuzeau         ###   ########.fr       */
+/*   Created: 2015/12/02 20:21:53 by pgourran          #+#    #+#             */
+/*   Updated: 2015/12/02 20:30:55 by pgourran         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+# include "libft.h"
 
-void	ft_putnbr(int n)
+void	ft_puttab(char **al)
 {
-	if (n < 0)
+	while(al)
 	{
+		ft_putstr(*al);
 		ft_putchar('\n');
-		n = -n;
+		al++;
 	}
-	if (n > 9)
-	{
-		ft_putnbr(n / 10);
-		ft_putnbr(n % 10);
-	}
-	ft_putchar(n + '0');
 }
