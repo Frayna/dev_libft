@@ -6,11 +6,11 @@
 /*   By: pgourran <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2015/12/02 19:51:00 by pgourran          #+#    #+#             */
-/*   Updated: 2015/12/02 19:57:31 by pgourran         ###   ########.fr       */
+/*   Updated: 2015/12/03 18:15:07 by pgourran         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-# include "libft.h"
+#include "libft.h"
 
 int		ft_isprime(int n)
 {

@@ -6,11 +6,11 @@
 /*   By: pgourran <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2015/12/01 21:34:13 by pgourran          #+#    #+#             */
-/*   Updated: 2015/12/02 18:58:26 by pgourran         ###   ########.fr       */
+/*   Updated: 2015/12/03 18:11:37 by pgourran         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-# include "libft.h"
+#include "libft.h"
 
 t_list	*ft_lstmap(t_list *lst, t_list *(*f)(t_list *elem))
 {
@@ -22,15 +22,13 @@ t_list	*ft_lstmap(t_list *lst, t_list *(*f)(t_list *elem))
 		new = f(lst);
 		ptr = new;
 	}
-	while(lst->next)
+	while (lst->next)
 	{
 		new->next = f(lst->next);
 		lst = lst->next;
 		new = new->next;
 	}
-//	new = f(lst);
 	if (ptr)
-		return(ptr);
-	return(NULL);
+		return (ptr);
+	return (NULL);
 }
-

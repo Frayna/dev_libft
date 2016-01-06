@@ -6,7 +6,7 @@
 /*   By: pgourran <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2015/11/29 13:07:44 by pgourran          #+#    #+#             */
-/*   Updated: 2015/11/30 21:34:07 by pgourran         ###   ########.fr       */
+/*   Updated: 2015/12/17 20:12:08 by pgourran         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -42,13 +42,15 @@ char			*ft_itoa(int n)
 	char	*str;
 	int		len;
 
-	len = ft_charint(n) + 1;
-	str = (char *)ft_memalloc(len);
 	if (n == -2147483648)
 	{
-		str = "-2147483648";
+		if ((str = (char *)ft_memalloc(12)))
+			ft_strcpy(str, "-2147483648");
 		return (str);
 	}
+	len = ft_charint(n) + 1;
+	if (!(str = (char *)ft_memalloc(len)))
+		return (NULL);
 	len -= 2;
 	if (str)
 	{

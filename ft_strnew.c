@@ -6,7 +6,7 @@
 /*   By: pgourran <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2015/11/30 21:56:09 by pgourran          #+#    #+#             */
-/*   Updated: 2015/11/30 21:56:10 by pgourran         ###   ########.fr       */
+/*   Updated: 2015/12/03 17:57:24 by pgourran         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,8 +17,7 @@ char	*ft_strnew(size_t size)
 	char *out;
 	char *pt_out;
 
-	out = malloc(sizeof(char) * size + 1);
-	if (!out)
+	if (!(out = malloc(sizeof(char) * size + 1)))
 		return (NULL);
 	pt_out = out;
 	while (size)

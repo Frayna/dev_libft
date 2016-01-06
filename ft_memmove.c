@@ -6,7 +6,7 @@
 /*   By: pgourran <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2015/11/24 16:34:24 by pgourran          #+#    #+#             */
-/*   Updated: 2015/11/30 21:32:38 by pgourran         ###   ########.fr       */
+/*   Updated: 2016/01/07 00:17:16 by pgourran         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,26 +14,22 @@
 
 void	*ft_memmove(void *dst, const void *src, size_t len)
 {
-	unsigned char		*tmp;
-	const unsigned char	*old;
 	unsigned char		*new;
-	unsigned int		i;
+	unsigned char		*old;
 
-	i = 0;
-	tmp = (unsigned char *)malloc(len);
-	old = src;
-	new = dst;
-	while (i < len)
+	old = (unsigned char *)src;
+	new = (unsigned char *)dst;
+	if ((new < old) && (len))
+		ft_memcpy(new, old, len);
+	else if ((new > old) && (len))
 	{
-		tmp[i] = old[i];
-		i++;
+		len--;
+		while (len)
+		{
+			new[len] = old[len];
+			len--;
+		}
+		new[len] = old[len];
 	}
-	i = 0;
-	while (i < len)
-	{
-		new[i] = tmp[i];
-		i++;
-	}
-	free(tmp);
 	return (dst);
 }

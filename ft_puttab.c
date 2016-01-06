@@ -6,15 +6,15 @@
 /*   By: pgourran <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2015/12/02 20:21:53 by pgourran          #+#    #+#             */
-/*   Updated: 2015/12/02 20:30:55 by pgourran         ###   ########.fr       */
+/*   Updated: 2015/12/04 17:08:45 by pgourran         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-# include "libft.h"
+#include "libft.h"
 
 void	ft_puttab(char **al)
 {
-	while(al)
+	while (*al)
 	{
 		ft_putstr(*al);
 		ft_putchar('\n');
